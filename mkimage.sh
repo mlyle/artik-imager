@@ -14,7 +14,7 @@ rm -rf dtbs
 # Layout a new disk image from scratch (sparse)
 dd if=loaders/bl1.bin of=${DISK} seek=1 bs=512
 dd if=loaders/bl2.bin of=${DISK} seek=31 bs=512
-dd if=loaders/u-boot-artik5-v2012.07-r3.bin of=${DISK} seek=63 bs=512
+dd if=loaders/u-boot.bin of=${DISK} seek=63 bs=512
 dd if=loaders/tzsw.bin of=${DISK} seek=719 bs=512
 dd if=/dev/zero of=${DISK} seek=${SIZE} bs=512 count=1
 
